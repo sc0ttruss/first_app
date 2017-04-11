@@ -1,13 +1,13 @@
 pipeline {
   agent {
     docker {
-      image 'jenkins'
       args '-p 8081:8080'
+      image 'scott/jenkins'
     }
     
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         emailext(subject: 'starting build', body: 'lets get started', attachLog: true, compressLog: true, to: 'scott.russell@inetmedia.co.uk')
       }
