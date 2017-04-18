@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'docker-slave'
-    }
-    
-  }
+  agent none
   stages {
     stage('error') {
       steps {
