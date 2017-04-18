@@ -1,8 +1,7 @@
 pipeline {
   agent {
-    docker {
-      args '-p 8081:8080'
-      image 'ubuntu'
+    node {
+      label 'docker-slave'
     }
     
   }
