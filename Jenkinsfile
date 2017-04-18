@@ -1,9 +1,9 @@
 pipeline {
   agent none
   stages {
-    stage('error') {
+    stage('First stage') {
       steps {
-        emailext(subject: 'starting build', body: 'lets get started', attachLog: true, compressLog: true, to: 'scott.russell@inetmedia.co.uk')
+        node(label: 'dockerslave')
       }
     }
   }
