@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('First stage') {
       steps {
+                node(label)
       }
     }
   }
