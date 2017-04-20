@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('First stage') {
       steps {
-                node(label)
+                node('jenkins-01')
       }
     }
   }
