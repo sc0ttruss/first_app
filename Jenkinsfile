@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('First stage') {
       steps {
-                node('jenkins-01')
+        node(label: 'jenkins-01')
+        sh 'echo `ls -al` '
       }
     }
   }
